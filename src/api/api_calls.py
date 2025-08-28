@@ -8,8 +8,15 @@ from src.authorisation import Authorisation
 
 class APICalls:
 
-    @staticmethod
-    async def get_server_data():
+    # Cache responses
+    CACHE = {}
+
+    @classmethod
+    def access_cache(cls, key):
+        return cls.CACHE.get(key)
+
+    @classmethod
+    async def get_server_data(cls):
         try:
             data = {
                 "url": APIMappings.BASE_URL + APIMappings.ENDPOINTS["getServerData"],
@@ -20,12 +27,19 @@ class APICalls:
             }
             # Send request
             api_client = APIClient()
-            server_data =  await api_client.get(data)
-            # Return request
-            return server_data.json()
+            response =  await api_client.get(data)
+            server_data = response.json()
+            # Store in cache
+            cls.CACHE[cls.get_server_data] = server_data
+            # Return data
+            return server_data
         except httpx.HTTPStatusError as hse:
-            print(hse)
-            raise hse
+            if hse.response.status_code == 404:
+                cls.CACHE[cls.get_server_data] = "Server not found :("
+                print(hse)
+            else:
+                cls.CACHE[cls.get_server_data] = "[Error]"
         except Exception as e:
+            cls.CACHE[cls.get_server_data] = "Error"
             print(e)
 
