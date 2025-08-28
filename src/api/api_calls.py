@@ -15,7 +15,7 @@ class APICalls:
                 "url": APIMappings.BASE_URL + APIMappings.ENDPOINTS["getServerData"],
                 "headers": {"x-token": Authorisation.generate_authcode(3)},
                 "params": {
-                    "usid": os.getenv("USID")
+                    "usid": os.getenv("USID_BOT1")
                 }
             }
             # Send request
@@ -25,6 +25,7 @@ class APICalls:
             return server_data.json()
         except httpx.HTTPStatusError as hse:
             print(hse)
+            raise hse
         except Exception as e:
             print(e)
 
