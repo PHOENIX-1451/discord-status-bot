@@ -1,8 +1,6 @@
 
 class Mappings:
 
-    BIO_BASE_MESSAGE = "BoB Server Status Bot"
-
     MAP_FILE_MAPPINGS = {
         "Achi Baba": "Achi Baba.jpg",
         "Albion": "Albion.jpg",
@@ -14,7 +12,7 @@ class Mappings:
         "Caporetto": "Caporetto.jpg",
         "Empire's Edge": "Empire's Edge.jpg",
         "Fao Fortress": "Fao Fortress.jpg",
-        "Fort De Vaux": "Fort De Vaux.jpg",
+        "Fort de Vaux": "Fort de Vaux.jpg",
         "Galicia": "Galicia.jpg",
         "Giant's Shadow": "Giant's Shadow.jpg",
         "Heligoland Bight": "Heligoland Bight.jpg",
@@ -24,7 +22,7 @@ class Mappings:
         "Monte Grappa": "Monte Grappa.jpg",
         "Nivelle Nights": "Nivelle Nights.jpg",
         "Passchendael": "Passchendael.jpg",
-        "Prise De Tahure": "Prise De Tahure.jpg",
+        "Prise de Tahure": "Prise de Tahure.jpg",
         "Razor's Edge": "Razor's Edge.jpg",
         "River Somme": "River Somme.jpg",
         "Rupture": "Rupture.jpg",
