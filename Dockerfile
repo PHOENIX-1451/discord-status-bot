@@ -1,5 +1,5 @@
 # Python version
-FROM python:3.10-slim
+FROM python:3.12-slim
 
 # Working directory inside container
 WORKDIR /app
@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 COPY . /app
 
 # Execute command to start the app
-CMD []
+CMD ["python", "main.py"]

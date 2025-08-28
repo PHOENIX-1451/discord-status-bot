@@ -1,0 +1,17 @@
+services:
+  discord-status-bot-ImageBuilder:
+    build: .
+    image: discord-status-bot:latest
+    command: ["true"]
+
+  discord-status-bot-1:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT1}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT1}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
