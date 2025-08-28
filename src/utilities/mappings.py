@@ -1,6 +1,8 @@
 
 class Mappings:
 
+    BIO_BASE_MESSAGE = "BoB Server Status Bot"
+
     MAP_FILE_MAPPINGS = {
         "Achi Baba": "Achi Baba.jpg",
         "Albion": "Albion.jpg",
