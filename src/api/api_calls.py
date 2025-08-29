@@ -28,6 +28,8 @@ class APICalls:
             # Send request
             api_client = APIClient()
             response =  await api_client.get(data)
+            # Check if an error occurred
+            response.raise_for_status()
             server_data = response.json()
             # Store in cache
             cls.CACHE[cls.get_server_data] = server_data
@@ -36,7 +38,6 @@ class APICalls:
         except httpx.HTTPStatusError as hse:
             if hse.response.status_code == 404:
                 cls.CACHE[cls.get_server_data] = "Server not found :("
-                print(hse)
             else:
                 cls.CACHE[cls.get_server_data] = "[Error]"
         except Exception as e:
