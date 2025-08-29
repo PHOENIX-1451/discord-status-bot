@@ -1,0 +1,3 @@
+
+class ImageEditor:
+    pass
