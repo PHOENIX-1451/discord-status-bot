@@ -11,4 +11,4 @@ if __name__ == "__main__":
     status_bot = StatusBot(intents = intents)
 
     # Start bot
-    status_bot.run(os.getenv("DISCORD_TOKEN_BOT1"))
+    status_bot.run(os.getenv("DISCORD_BOT_TOKEN"))

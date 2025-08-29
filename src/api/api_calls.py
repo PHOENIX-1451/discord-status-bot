@@ -22,7 +22,7 @@ class APICalls:
                 "url": APIMappings.BASE_URL + APIMappings.ENDPOINTS["getServerData"],
                 "headers": {"x-token": Authorisation.generate_authcode(3)},
                 "params": {
-                    "usid": os.getenv("USID_BOT1")
+                    "usid": os.getenv("USID")
                 }
             }
             # Send request
