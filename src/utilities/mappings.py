@@ -12,7 +12,7 @@ class Mappings:
         "Caporetto": "Caporetto.jpg",
         "Empire's Edge": "Empire's Edge.jpg",
         "Fao Fortress": "Fao Fortress.jpg",
-        "Fort de Vaux": "Fort de Vaux.jpg",
+        "Fort De Vaux": "Fort De Vaux.jpg",
         "Galicia": "Galicia.jpg",
         "Giant's Shadow": "Giant's Shadow.jpg",
         "Heligoland Bight": "Heligoland Bight.jpg",
