@@ -10,6 +10,7 @@ from discord.ext import tasks
 from src.api import APIClient, APICalls
 from src.api.api_mappings import APIMappings
 from src.utilities import Mappings
+from src.utilities.image_editor import ImageEditor
 
 
 class StatusBot(discord.Client):
@@ -26,6 +27,9 @@ class StatusBot(discord.Client):
     async def on_ready(self):
         # Initialise API client singleton
         APIClient(base_url = APIMappings.BASE_URL)
+        ie = ImageEditor()
+        ie.add_font("futura_large", f"{self.PROJECT_ROOT}/assets/fonts/Futura.ttf", 130)
+        ie.add_font("dejavu_sans_small", f"{self.PROJECT_ROOT}/assets/fonts/DejaVu Sans.ttf", 45)
         await APICalls.get_server_data()
         print("Bot Ready")
         # Start update loop
@@ -74,7 +78,7 @@ class StatusBot(discord.Client):
             await self.change_presence(activity = activity)
             print(f"[{datetime.now().strftime("%H:%M:%S")}]: Updated Rich Presence ({player_count})")
 
-    @tasks.loop(seconds = 120)
+    @tasks.loop(seconds = 60)
     async def update_profile(self):
         try:
             # Access data
@@ -89,12 +93,15 @@ class StatusBot(discord.Client):
             else:
                 if server_data["info"]["map"] != self.PREVIOUS_SERVER_INFO["map"]:
                     self.PREVIOUS_SERVER_INFO["map"] = server_data["info"]["map"]
-                    # Get map image
+                    # Get map image (Banner)
                     path = f"{self.PROJECT_ROOT}/assets/images/maps/{Mappings.MAP_FILE_MAPPINGS[server_data["info"]["map"]]}"
                     with open(path, "rb") as f:
-                        map_bytes = f.read()
+                        banner_bytes = f.read()
+                    # Get Profile picture (as bytes)
+                    image_editor = ImageEditor()
+                    profile_picture_bytes = image_editor.create_map_pfp(path, server_data["info"]["smallmode"], str(server_data["info"]["favourites"]))
                     # Change profile picture and banner
-                    await self.user.edit(avatar = map_bytes, banner = map_bytes)
+                    await self.user.edit(avatar = profile_picture_bytes, banner = banner_bytes)
                     self.DEFAULT = False
                     print(f"[{datetime.now().strftime("%H:%M:%S")}]: Updated profile picture and banner ({server_data["info"]["map"]})")
 

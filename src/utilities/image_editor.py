@@ -28,15 +28,16 @@ class ImageEditor(metaclass = SingletonMeta):
         # Add game mode
         mode_bounds = draw.textbbox((0, 0), mode, font = self.fonts.get("futura_large"))
         draw.text(
-            ((W - mode_bounds[2]) / 2, (H - mode_bounds[3]) / 2), mode, font = self.fonts.get("futura_large")
+            ((W - mode_bounds[2]) / 2, (H - mode_bounds[3]) / 2 - 20), mode, font = self.fonts.get("futura_large")
         )
 
-        # Add favourite count
-        favourite_bounds = draw.textbbox((0, 0), favourites, font = self.fonts.get("futura_small"))
+        # Add favourites
+        star_bounds = draw.textbbox((0, 0), "\u2605" + favourites, font = self.fonts.get("dejavu_sans_small"))
         draw.text(
-            ((W - favourite_bounds[2]) / 2, (H - favourite_bounds[3]) / 2 + 50), "\u2605" + favourites, font = self.fonts.get("fallback_small")
+            ((W - star_bounds[2]) / 2, (H - star_bounds[3]) / 2 + 70), "\u2605" + favourites, font = self.fonts.get("dejavu_sans_small")
         )
-        copy.show()
+
+        # Save in memory as bytes and return
         bytes_io = BytesIO()
         copy.save(bytes_io, format = "JPEG")
         return bytes_io.getvalue()
