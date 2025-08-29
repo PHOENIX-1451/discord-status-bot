@@ -15,3 +15,112 @@ services:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
     restart: unless-stopped
+
+  discord-status-bot-2:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT2}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT2}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-3:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT3}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT3}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-4:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT4}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT4}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-5:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT5}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT5}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-6:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT6}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT6}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-7:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT7}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT7}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-8:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT8}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT8}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-9:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT9}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT9}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
+  discord-status-bot-10:
+    image: discord-status-bot:latest
+    # Environmental variables
+    environment:
+      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
+      - USID=${USID_BOT10}
+      - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT10}
+    volumes:
+      # Assets for bot (Images / Fonts)
+      - ./assets:/app/assets:ro
+    restart: unless-stopped
+
