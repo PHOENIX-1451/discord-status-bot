@@ -14,6 +14,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-2:
@@ -26,6 +31,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-3:
@@ -38,6 +48,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-4:
@@ -50,6 +65,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-5:
@@ -62,6 +82,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-6:
@@ -74,6 +99,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-7:
@@ -86,6 +116,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-8:
@@ -98,6 +133,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-9:
@@ -110,6 +150,11 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
   discord-status-bot-10:
@@ -122,5 +167,10 @@ services:
     volumes:
       # Assets for bot (Images / Fonts)
       - ./assets:/app/assets:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "3"
     restart: unless-stopped
 
