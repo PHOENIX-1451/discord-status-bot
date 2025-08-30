@@ -21,7 +21,7 @@ class Mappings:
         "Łupków Pass": "Łupków Pass.jpg",
         "Monte Grappa": "Monte Grappa.jpg",
         "Nivelle Nights": "Nivelle Nights.jpg",
-        "Passchendael": "Passchendael.jpg",
+        "Passchendaele": "Passchendaele.jpg",
         "Prise de Tahure": "Prise de Tahure.jpg",
         "Razor's Edge": "Razor's Edge.jpg",
         "River Somme": "River Somme.jpg",
