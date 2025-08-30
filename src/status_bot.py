@@ -124,7 +124,7 @@ class StatusBot(discord.Client):
 
         except Exception as e:
             print(type(e))
-            print(f"[{datetime.now().strftime("%H:%M:%S")}]: {e}")
+            print(f"[{datetime.now().strftime("%H:%M:%S")}]: PB - {e}")
 
     async def default(self, message):
         try:
@@ -149,7 +149,6 @@ class StatusBot(discord.Client):
             # Get error details
             error = await he.response.json()
             print(f"[{datetime.now().strftime("%H:%M:%S")}]: {error}")
-            print(self.DEFAULT)
             # Check if profile update got rate limited
             avatar_error = error["errors"].get("avatar")
             banner_error = error["errors"].get("banner")
@@ -160,6 +159,5 @@ class StatusBot(discord.Client):
             elif banner_error:
                 if banner_error["_errors"][0]["code"] == "BANNER_RATE_LIMIT":
                     self.DEFAULT = False
-            print(self.DEFAULT)
         except Exception as e:
-            print(f"[{datetime.now().strftime("%H:%M:%S")}]: {e}")
+            print(f"[{datetime.now().strftime("%H:%M:%S")}]: D - {e}")
