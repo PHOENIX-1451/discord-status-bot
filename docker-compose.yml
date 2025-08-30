@@ -8,7 +8,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT1}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT1}
     volumes:
@@ -25,7 +24,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT2}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT2}
     volumes:
@@ -42,7 +40,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT3}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT3}
     volumes:
@@ -59,7 +56,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT4}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT4}
     volumes:
@@ -76,7 +72,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT5}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT5}
     volumes:
@@ -93,7 +88,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT6}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT6}
     volumes:
@@ -110,7 +104,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT7}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT7}
     volumes:
@@ -127,7 +120,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT8}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT8}
     volumes:
@@ -144,7 +136,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT9}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT9}
     volumes:
@@ -161,7 +152,6 @@ services:
     image: discord-status-bot:latest
     # Environmental variables
     environment:
-      - BASE_REFRESH_INTERVAL=${BASE_REFRESH_INTERVAL}
       - USID=${USID_BOT10}
       - DISCORD_BOT_TOKEN=${DISCORD_TOKEN_BOT10}
     volumes:
