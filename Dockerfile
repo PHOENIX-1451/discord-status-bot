@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy requirements.txt to container (for dependencies)
 COPY ./requirements.txt /app
 
+# Unbuffered logging
+ENV PYTHONUNBUFFERED=1
+
 # Install dependencies
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
