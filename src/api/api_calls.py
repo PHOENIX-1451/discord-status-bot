@@ -1,4 +1,6 @@
 import os
+from datetime import datetime
+
 import httpx
 
 from src.api import APIClient
@@ -36,11 +38,12 @@ class APICalls:
             # Return data
             return server_data
         except httpx.HTTPStatusError as hse:
+            print(f"[{datetime.now().strftime("%H:%M:%S")}]: API Call HTTPError - {hse}")
             if hse.response.status_code == 404:
                 cls.CACHE[cls.get_server_data] = "Server not found :("
             else:
-                cls.CACHE[cls.get_server_data] = "[Error]"
+                cls.CACHE[cls.get_server_data] = "Error"
         except Exception as e:
-            cls.CACHE[cls.get_server_data] = "Error"
-            print(e)
+            cls.CACHE[cls.get_server_data] = "[Error]"
+            print(f"[{datetime.now().strftime("%H:%M:%S")}]: API Call - {e}")
 
