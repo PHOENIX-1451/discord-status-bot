@@ -40,7 +40,10 @@ class StatusBot(discord.Client):
     async def close(self):
         # Close API client session
         api_client = APIClient()
-        await api_client.close_async_session()
+        try:
+            await api_client.close_async_session()
+        except AttributeError:
+            pass
         # Close connection to discord
         await super().close()
         print("Bot Terminated")
