@@ -10,6 +10,9 @@ COPY ./requirements.txt /app
 # Unbuffered logging
 ENV PYTHONUNBUFFERED=1
 
+# API request base interval
+ENV BASE_REFRESH_INTERVAL=10
+
 # Install dependencies
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
