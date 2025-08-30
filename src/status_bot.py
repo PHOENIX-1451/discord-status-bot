@@ -85,12 +85,7 @@ class StatusBot(discord.Client):
             server_data = APICalls.access_cache(APICalls.get_server_data)
 
             # Check if there was an error
-            if isinstance(server_data, str):
-                if not self.DEFAULT:
-                    # Reset everything to default
-                    await self.default(server_data)
-                    return
-            else:
+            if not isinstance(server_data, str) :
                 if server_data["info"]["map"] != self.PREVIOUS_SERVER_INFO["map"]:
                     self.PREVIOUS_SERVER_INFO["map"] = server_data["info"]["map"]
                     # Get map image (Banner)
