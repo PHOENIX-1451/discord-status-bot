@@ -128,7 +128,6 @@ class StatusBot(discord.Client):
 
     async def default(self, message):
         try:
-            self.PREVIOUS_SERVER_INFO["map"] = ""
             # Change rich presence to the provided message
             activity = discord.Game(name = message)
             # Apply changes
@@ -143,6 +142,7 @@ class StatusBot(discord.Client):
 
             # Apply changes
             await self.user.edit(avatar = profile_picture, banner = banner)
+            self.PREVIOUS_SERVER_INFO["map"] = ""
             self.DEFAULT = True
             print(f"[{datetime.now().strftime("%H:%M:%S")}]: Reset to default")
         except HTTPException as he:
