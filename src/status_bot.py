@@ -128,6 +128,7 @@ class StatusBot(discord.Client):
 
     async def default(self, message):
         try:
+            self.PREVIOUS_SERVER_INFO["map"] = ""
             # Change rich presence to the provided message
             activity = discord.Game(name = message)
             # Apply changes
